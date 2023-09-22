@@ -1210,7 +1210,7 @@ Note that the SPIR compilation flow has been discontinued.
   ```bash
   cd $DPCPP_HOME/llvm/build
   # Running tests with the CPU backend
-  cmake --build . --parallel `nproc` --target check-sycl-vitis-cpu
+  cmake --build . --target check-sycl-vitis-cpu -- -j `nproc`
   ```
 
 - Run the `vitis` test suite with hardware emulation (HLS flow):
