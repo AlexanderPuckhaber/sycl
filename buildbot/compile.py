@@ -30,6 +30,8 @@ def do_compile(args):
     cmake_cmd = [
         "cmake",
         "--build", abs_obj_dir,
+        # '--gcc-install-dir', '/netscratch/apuckhaber3/git/gcc-13.2.0/',
+        # '-std=c++20',
         "--",
         args.build_target,
         "-j", str(cpu_count)]

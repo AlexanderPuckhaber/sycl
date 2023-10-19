@@ -180,10 +180,10 @@ def _run_in_isolated_proctree(cmd, *args, **kwargs):
     handling is strange.
     """
     newcmd = ("unshare",
-              "--map-current-user",
-              "--pid",
-              "--mount-proc",
-              "--kill-child",
+            #   "--map-current-user",
+            #   "--pid",
+            #   "--mount-proc",
+            #   "--kill-child",
               *cmd)
     return subprocess.run(newcmd, *args, **kwargs)
 
